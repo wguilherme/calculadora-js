@@ -12,6 +12,7 @@ class CalcController {
 
     this._currentDate;
     this.initialize();
+    this.initButtonsEvents();
   }
 
   initialize() {
@@ -19,6 +20,18 @@ class CalcController {
     setInterval(() => {
       this.setDisplayDateTime();
     }, 1000);
+  }
+
+  initButtonsEvents() {
+    let buttons = document.querySelector("#buttons > g, #parts > g");
+
+    buttons.forEach((btn, index) => {
+      btn.addEventListener("click", (e) => {
+
+        console.log(btn.className.baseVal);
+        
+      });
+    });
   }
 
   // vírgula após o locale para personalizar o modelo dos dados
