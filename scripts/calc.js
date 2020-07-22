@@ -1,2 +1,1 @@
-let calculadora = new CalcController();
-let calculadora2 = new CalcController();
+let calc = new CalcController();
